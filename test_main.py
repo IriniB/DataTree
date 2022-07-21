@@ -6,8 +6,8 @@ import pandas as pd
 class TestTree(TestCase):
     df1 = pd.read_excel(r'data1.xlsx')
     df2 = pd.read_excel(r'data2.xlsx')
-    # Работает если запускать тесты по отдельности
 
+    # Тесты работают если запускать их по отдельности
     def test1(self):
         tree1 = Tree(self.df1, 'класс1', 'класс2')
         self.assertEqual(tree1.get_children(), ['a', 'd', 'c', 'b'])
